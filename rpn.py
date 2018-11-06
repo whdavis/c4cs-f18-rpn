@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import math
+
 def calculate(arg):
 	stack = []
 	tokens = arg.split()
@@ -13,6 +15,8 @@ def calculate(arg):
 				result = val1 + val2
 			elif token == '-':
 				result = val1 - val2
+			elif token == '^':
+				result = math.pow(val1, val2)
 			stack.append(result)
 	if len(stack) > 1:
 		raise ValueError('Too many arguments on the stack')
