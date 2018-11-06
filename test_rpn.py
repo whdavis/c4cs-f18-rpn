@@ -13,3 +13,7 @@ class TestBasics(unittest.TestCase):
 	def test_toomany(self):
 		with self.assertRaises(ValueError):
 			result = rpn.calculate('1 2 3 +')
+
+	def test_pow(self)
+		result = rpn.calculate('2 2 ^')
+		self.assertEqual(4, result)
